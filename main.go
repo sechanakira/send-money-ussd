@@ -22,8 +22,7 @@ func main() {
 
 	defer mysql.Close()
 
-	db.AutoMigrate(&SessionStage)
-	db.AutoMigrate(&UssdSession)
-	db.AutoMigrate(&MenuText)
-	db.AutoMigrate(&ForeignCurrencyRates)
+	db.AutoMigrate(&UssdSession{})
+	db.AutoMigrate(&MenuText{})
+	db.AutoMigrate(&ForeignCurrencyRates{})
 }

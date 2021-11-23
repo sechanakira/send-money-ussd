@@ -17,12 +17,14 @@ type UssdSession struct {
 }
 
 type MenuText struct {
+	gorm.Model
 	Text       string
 	Language   string
 	MenuNumber int
 }
 
 type ForeignCurrencyRates struct {
+	gorm.Model
 	BaseCurrency string
 	ZarToKwsRate float32
 	ZarToMwkRate float32
